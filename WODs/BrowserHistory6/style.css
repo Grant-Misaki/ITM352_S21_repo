@@ -39,8 +39,8 @@ float: left;
             
 
 body { 
-    font-family: 'Open Sans';
-    color: yellow;
+    font-family: 'Open Sans', sans-serif;
+    color:yellow;
     margin:10px 50px 10px 50px;
     width: 950px;
     background-color:black;
