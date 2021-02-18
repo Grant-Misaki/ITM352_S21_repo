@@ -16,8 +16,8 @@
 	 var last_name= "Misaki"; 
 	 var hits = 0; 
 	 var spins = 0; 
+	 var now = new Date();
 	 line = 1;
-	 now = new Date();
 	 hits = 7; 
 	 spins = 5;
 	  
@@ -53,7 +53,7 @@
 				++spins;
 				spins_span.innerHTML = spins; 
 				this.className='item rotate';
-				hit_spin_span.innerHTML= hits_span.innerHTML/spins_span.innerHTML;
+				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 
 				onclick=" 
@@ -71,7 +71,7 @@
 				++spins;
 				spins_span.innerHTML = spins; 
 				this.className='item rotate';
-				hit_spin_span.innerHTML= hits_span.innerHTML/spins_span.innerHTML;
+				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 			
 			onclick=" 
@@ -88,7 +88,7 @@
 			++spins;
 				spins_span.innerHTML = spins; 
 				this.className='item rotate';
-				hit_spin_span.innerHTML= hits_span.innerHTML/spins_span.innerHTML;
+				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 			
 			onclick=" 
@@ -105,7 +105,7 @@
 			++spins;
 				spins_span.innerHTML = spins; 
 				this.className='item rotate';
-				hit_spin_span.innerHTML= hits_span.innerHTML/spins_span.innerHTML;
+				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 
 			onclick=" 
@@ -122,7 +122,7 @@
 				++spins;
 				spins_span.innerHTML = spins; 
 				this.className='item rotate';
-				hit_spin_span.innerHTML= hits_span.innerHTML/spins_span.innerHTML;
+				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 				
 				onclick="
@@ -139,14 +139,20 @@
 	</div>
 	<footer>
 		<script>
-			// stuck on number 6 b, the given code does not work.
+			//initailizing and defining variables...
+			var h=(now.getHours()%12);
+			var mer=(now.getHours()< 12)?'AM':'PM';
+			/* why does the table disapear when I insert this?
+			var m= (now.getMinutes(); 
+			*/
+
 		document.write(`
 		<table border="1" style="margin-left: auto; margin-right: auto; text-align: center;">
 		<tr><th colspan="2"><h1>Your One Stop For Used Phones - 
 			${first_name[0] + "." + last_name[0] + "."}'s</h1></th></tr>
 		<tr><td>1.</td><td><br />Copyright @Grant Misaki</td></tr>
 		<tr><td>2.</td><td>2021</td></tr>
-		<tr><td>3.</td><td>6:41 PM </td></tr>
+		<tr><td>3.</td><td>${h + " " + mer}</td></tr>
 	</table>
 	`);
 	</script>
