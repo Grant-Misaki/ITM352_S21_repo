@@ -42,7 +42,8 @@
 			Hits:<span id="hits_span">0</span>
 			Spins:<span id="spins_span">0</span>
 			Hit/Spin: <span id="hit_spin_span">0</span> 
-
+			You win:<span id="win_span">pending...</span>
+			
 		</p>
 		</center>
 
@@ -50,15 +51,17 @@
 	<div>
 		<main>
 			<section class="item" id="HTC" onmouseover=" 
-				++spins;
-				spins_span.innerHTML = spins; 
+				
+				spins_span.innerHTML = ++spins; 
 				this.className='item rotate';
-				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
+				hit_spin_span.innerHTML= (hits/spins).toFixed(2);
+				 win_span.innerHTML = ((hits/spins >= 0.5) && (hits<spins));
 				"
 
 				onclick=" 
-				++hits;
-				hits_span.innerHTML = hits; 
+				
+				hits_span.innerHTML = ++hits; 
+				win_span.innerHTML = (hits/spins >= 0.5);
 				this.className='item'">
 
 
@@ -68,15 +71,15 @@
 			</section>
 
 			<section class="item" id="Apple" onmouseover=" 
-				++spins;
-				spins_span.innerHTML = spins; 
+				
+				spins_span.innerHTML = ++spins; 
 				this.className='item rotate';
 				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 			
 			onclick=" 
-			++hits;
-			hits_span.innerHTML = hits; 
+			
+			hits_span.innerHTML = ++hits;
 			this.className='item'">
 				
 				<h2>Apple</h2>
@@ -85,15 +88,15 @@
 			</section>
 			
 			<section class="item" id="Nokia" onmouseover="  
-			++spins;
-				spins_span.innerHTML = spins; 
+			
+				spins_span.innerHTML =  ++spins;
 				this.className='item rotate';
 				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 			
 			onclick=" 
-			++hits;
-			hits_span.innerHTML = hits; 
+			
+			hits_span.innerHTML = ++hits;
 			this.className='item'">
 
 				<h2>Nokia</h2>
@@ -102,15 +105,15 @@
 			</section>
 
 			<section class="item" id="Samsung" onmouseover=" 
-			++spins;
-				spins_span.innerHTML = spins; 
+			
+				spins_span.innerHTML = ++spins;
 				this.className='item rotate';
 				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 
 			onclick=" 
-			++hits;
-			hits_span.innerHTML = hits; 
+			
+			hits_span.innerHTML = ++hits;
 			this.className='item'">
 
 				<h2>Samsung</h2>
@@ -119,15 +122,14 @@
 			</section>
 
 			<section class="item" id="Blackberry" onmouseover="
-				++spins;
-				spins_span.innerHTML = spins; 
+				
+				spins_span.innerHTML = ++spins; 
 				this.className='item rotate';
 				hit_spin_span.innerHTML= (hits_span.innerHTML/spins_span.innerHTML).toFixed(2);
 				"
 				
 				onclick="
-				++hits;
-				hits_span.innerHTML= hits;
+				hits_span.innerHTML= ++hits;
 				this.className='item';">
 
 				<h2>Blackberry</h2>
@@ -150,9 +152,9 @@
 		<table border="1" style="margin-left: auto; margin-right: auto; text-align: center;">
 		<tr><th colspan="2"><h1>Your One Stop For Used Phones - 
 			${first_name[0] + "." + last_name[0] + "."}'s</h1></th></tr>
-		<tr><td>1.</td><td><br />Copyright @Grant Misaki</td></tr>
-		<tr><td>2.</td><td>2021</td></tr>
-		<tr><td>3.</td><td>${h + " " + mer}</td></tr>
+		<tr><td>${++line}</td> <td><br />Copyright @Grant Misaki</td></tr>
+		<tr><td>${++line}</td><td>${now.getFullYear()}</td></tr>
+		<tr><td>${++line}</td><td>${(now.getHours() + 11)%12 + 1 + ':' + now.getMinutes()} ${(now.getHours < 12)?'AM':'PM'}</td></tr>
 	</table>
 	`);
 	</script>
