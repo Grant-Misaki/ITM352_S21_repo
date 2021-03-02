@@ -48,8 +48,23 @@ var item1 = 'Taco';
     // Compute taxes
     var tax = (subTotal*0.0575);
 
+    // Compute Shipping
+    var ship= 0;
+
+    if(subTotal<50){
+      ship=2;
+    }
+      else
+        if(subTotal>50 && subTotal<100) {
+          ship=5;
+        }
+          else
+            if(subTotal>100){
+              ship=(subTotal*0.05)
+            }
+
     // Compute Grand total
-    var grandTotal= (subTotal+tax);
+    var grandTotal= (subTotal+tax+ship);
   </script>
 
 <!DOCTYPE html>
@@ -129,6 +144,10 @@ var item1 = 'Taco';
           </tr>
             <td style="text-align: center;" colspan="3" width="67%"><span style="font-family: arial;">Tax @ 5.75%</span></td>
             <td width="54%">$<script>document.write(tax.toFixed(2));</script></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;" colspan="3" width="67%"><strong>Shipping</strong></td>
+            <td width="54%"><strong>$<script>document.write(ship.toFixed(2));</script></strong></td>
           </tr>
           <tr>
             <td style="text-align: center;" colspan="3" width="67%"><strong>Total</strong></td>
