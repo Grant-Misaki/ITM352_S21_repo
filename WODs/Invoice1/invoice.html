@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
+<script>
 /* This program will make a table for an invoice*/
 // Product Data
 // Product 1
@@ -32,7 +23,7 @@ var item1 = 'Taco';
      var price3 = 2.49;
 
      // Compute extended prices
-     var extended_price3 = (quantity3*price3;
+     var extended_price3 = (quantity3*price3);
 
      // Product 4
      var item4 = 'fries';
@@ -52,7 +43,7 @@ var item1 = 'Taco';
      var extended_price5 = (quantity5*price5);
 
      // Compute sub-total
-     var subTotal =(quantity1+quantity2+quantity3+quantity4);
+     var subTotal =(extended_price1+extended_price2+extended_price3+extended_price4);
 
     // Compute taxes
     var tax = (subTotal*0.0575);
@@ -61,66 +52,90 @@ var item1 = 'Taco';
     var grandTotal= (subTotal+tax);
   </script>
 
-  <script>
-    document.write(`
-    
-    <table border="2">
-  <tbody>
-    <tr>
-      <th style="text-align: center;" width="43%">Item</th>
-      <th style="text-align: center;" width="11%">quantity</th>
-      <th style="text-align: center;" width="13%">price</th>
-      <th style="text-align: center;" width="54%">extended price</th>
-    </tr>
-    <tr>
-      <td width="43%">Tacos</td>
-      <td align="center" width="11%">2</td>
-      <td width "13%"> $1.36</td>
-      <td width="54%">$2.46</td>
-    </tr>
-    <tr>
-      <td width="43%">Nachos</td>
-      <td align="center" width="11%">1</td>
-      <td width="13%">$2.46</td>
-      <td width="54%">$2.46</td>
-    </tr>
-    <tr>
-      <td width="43%">Crunchwrap</td>
-      <td align="center" width="11%">2</td>
-      <td width="13%">$2.49</td>
-      <td width="54%">$4.98</td>
-    </tr>
-    <tr>
-      <td width="43%">Fries</td>
-      <td align="center" width="11%">1</td>
-      <td width="13%">$1.20</td>
-      <td width="54%">$1.20</td>
-    </tr>
-    <tr>
-      <td width="43%">Burgers</td>
-      <td align="center" width="11%">1</td>
-      <td width="13%">$2.50</td>
-      <td width="54%">$2.50</td>
-    </tr>
-    <tr>
-      <td colspan="4" width="100%">&nbsp;</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;" colspan="3" width="67%">Sub-total</td>
-      <td width="54%">$13.66</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;" colspan="3" width="67%"><span style="font-family: arial;">Tax @ 5.75%</span></td>
-      <td width="54%">$0.76</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;" colspan="3" width="67%"><strong>Total</strong></td>
-      <td width="54%"><strong>$14.42</strong></td>
-    </tr>
-  </tbody>
-</table>
-    `)
-  </script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h1>Sushi Shop!!</h1>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+      <table border="2">
+        <tbody>
+          <tr>
+            <th style="text-align: center;" width="43%">Item</th>
+            <th style="text-align: center;" width="11%">quantity</th>
+            <th style="text-align: center;" width="13%">price</th>
+            <th style="text-align: center;" width="54%">extended price</th>
+          </tr>
+          <script>
+          document.write(`
+              <tr>
+                  <td width="43%">${item1}</td>
+                  <td align="center" width="11%">${quantity1}</td>
+                  <td width="13%">\$${price1}</td>
+                  <td width="54%">\$${extended_price1}</td>
+              </tr>
+          `);
+          </script>
+          <script>
+              document.write(`
+                  <tr>
+                      <td width="43%">${item2}</td>
+                      <td align="center" width="11%">${quantity2}</td>
+                      <td width="13%">\$${price2}</td>
+                      <td width="54%">\$${extended_price2}</td>
+                  </tr>
+              `);
+          </script>
+          <script>
+              document.write(`
+                  <tr>
+                      <td width="43%">${item3}</td>
+                      <td align="center" width="11%">${quantity3}</td>
+                      <td width="13%">\$${price3}</td>
+                      <td width="54%">\$${extended_price3}</td>
+                  </tr>
+              `);
+          </script>
+          <script>
+              document.write(`
+                  <tr>
+                      <td width="43%">${item4}</td>
+                      <td align="center" width="11%">${quantity4}</td>
+                      <td width="13%">\$${price4}</td>
+                      <td width="54%">\$${extended_price4}</td>
+                  </tr>
+              `);
+          </script>
+          <script>
+              document.write(`
+                  <tr>
+                      <td width="43%">${item5}</td>
+                      <td align="center" width="11%">${quantity5}</td>
+                      <td width="13%">\$${price5}</td>
+                      <td width="54%">\$${extended_price5}</td>
+                  </tr>
+              `);
+          </script>
+          <tr>
+            <td colspan="4" width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;" colspan="3" width="67%">Sub-total</td>
+            <td width="54%">$<script>document.write(subTotal);</script></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;" colspan="3" width="67%"><span style="font-family: arial;">Tax @ 5.75%</span></td>
+            <td width="54%">$<script>document.write(tax.toFixed(2));</script></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;" colspan="3" width="67%"><strong>Total</strong></td>
+            <td width="54%"><strong>$<script>document.write(grandTotal.toFixed(2));</script></strong></td>
+          </tr>
+        </tbody>
+      </table>  
 </body>
 </html>
