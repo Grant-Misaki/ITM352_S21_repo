@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<span id="firstname">Grant</span>, <span id="lastname">Misaki</span>
+<script>
+     const a=firstname.innerHTML;
+     const b=lastname.innerHTML;
+</script>
+<br> 
+<input type="button" value="Swap" 
+    onclick="
+        if(firstname.innerHTML== a) {
+            firstname.innerHTML = b;
+            lastname.innerHTML =a ;
+        }
+        else {
+            firstname.innerHTML=a;
+            lastname.innerHTML=b;
+        }
+    ">  
+</body>
+</html>
+
