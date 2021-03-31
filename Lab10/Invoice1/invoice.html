@@ -49,8 +49,8 @@ var product1 = {
      // Compute extended prices
      var extended_price5 = (quantity5*price5);
 
-     // Compute sub-total
-     var subTotal =0;
+     //Compute subtotal before tax
+    var subtotal = extended_price1 + extended_price2 + extended_price3 + extended_price4 + extended_price5;
 
     // Compute taxes
     var tax = (subTotal*0.0575);

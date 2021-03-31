@@ -70,6 +70,8 @@ var item1 = 'Taco';
             <th style="text-align: center;" width="54%">extended price</th>
           </tr>
           <script>
+              for(i=1; eval("typeof item"+i) != 'undefined')
+
             //Computes extended price
             var extended_price=quantity1*price1;
             subTotal=subTotal+extended_price;

@@ -1,0 +1,58 @@
+<script src="./products.js" type="text/javascript">
+    function checkQuantityTextbox(qtyTextboxObj){
+      var errs = isNonNegInt(qtyTextboxObj.value, true);
+        qty_textbox_message.innerHTML=errs.join(', ');
+    }
+
+    function isNonNegInt(q, returnErrors=false) {
+    if(q=='') q=0;
+    var errors = []; // assume no errors at first
+    if(Number(q) != q) errors.push('Not a number!'); // Check if string is a number value
+    if(q < 0) errors.push('Negative value!'); // Check if it is non-negative
+    if(parseInt(q) != q) errors.push('Not an integer!'); // Check that it is an integer 
+
+    return returnErrors ?  errors : (errors.length == 0);
+}
+
+    function displayPurchase(){
+        if(isNonNegInt(quantity_textbox.value) )    {
+        document.body.innerHTML=`Thank you for ordering ${quantity_textbox ["quantity_textbox"] } things!`;
+        }
+    }
+
+    var params = (new URL(document.location)).searchParams;
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="products-style.css">
+</head>
+
+<body>
+
+<script>
+    myArray = [];
+</script>
+
+    <table border="2">
+        <script>
+            for (var i = 1; i < products.length; i++) {
+                document.write(`
+                <td><img src=${products[i].image}><br><h2>${products[i].name}</h2><br> <input type="text" id="quantity_textbox${i}" form="my_form"> <br> <h2>$${products[i].price.toFixed(2)}</h2><br></td>`);
+            }
+        </script>
+    </table>
+
+    <script>
+         myArray=[quantity_textbox1, quantity_textbox2, quantity_textbox3, quantity_textbox4];
+
+    </script>
+    <input type="submit" onClick=";" value="Purchase">
+</body>
+
+
+</html>

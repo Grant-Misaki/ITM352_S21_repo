@@ -1,0 +1,56 @@
+/* General */
+body { 
+    width: 800px; margin: 0 auto;
+   /* background-image: url("images/toyWall.jpg");*/
+   
+}
+
+/* Form styling */
+div {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid black;
+    display: flex;
+}
+
+/* Styling the products display */
+img {
+    Height: 200px; width: 200px;
+}
+
+.rotate img
+{
+  animation: rotation .3s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+table {
+  background-color: white;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* block styling */
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;   
+}
+
+/*
