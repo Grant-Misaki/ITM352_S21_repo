@@ -1,3 +1,4 @@
+<script src="./products_data.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,35 +8,37 @@
 	<link rel="stylesheet" href="products-style.css">
 <script>
 	// create product objects
-	var product1 = {
+	var products = [
+	{
 	 name : 'HTC',
      price : 40.00,
      image : 'http://dport96.github.io/ITM352/morea/080.flow-control-II/HTC.jpg'
-	}
+	},
 
-	var product2 = {
+	{
      name: "Apple",
      price: 75.00,
      image: "http://dport96.github.io/ITM352/morea/080.flow-control-II/iphone-3gs.jpg"
-	}
+	},
 
-	var product3 = {
+	{
      name : "Nokia",
      price : 35.00,
      image : "http://dport96.github.io/ITM352/morea/080.flow-control-II/Nokia.jpg"
-	 }
+	 },
 
-     var product4 = {
+     {
 	 name : "Samsung",
      price : 45.00,
      image : "http://dport96.github.io/ITM352/morea/080.flow-control-II/Samsung.jpg"
-	}
+	},
 
-	 var product5 = {
+	{
      name : "Blackberry",
      price  : 10.00,
      image : "http://dport96.github.io/ITM352/morea/080.flow-control-II/Blackberry.jpg"
 	 }
+	];
 
 	 //Create procuts array 
 	 var products= [product1, product2, product3, product4, product5];
@@ -50,11 +53,12 @@
 			
 			<script>
 
-				for(var i=1; i < products.length; i++){
+				for(var i=0; i < products.length; i++){
 				document.write(`
-				<h2>${products[i].name}</h2>
-				<p>${products[i].price}</p>
-				<img src=${products[i].image}>
+				<img src=${products[i].image}><br>
+				<h2>${products[i].name}</h2><br>
+				<p>${products[i].price}</p><br>
+				
 			`);
 				}
 			</script>

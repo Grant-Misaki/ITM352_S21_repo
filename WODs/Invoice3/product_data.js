@@ -1,4 +1,4 @@
-// create product objects
+// Creates an array of objects
 var product1 = {
     name : 'HTC',
     price : 40.00,
