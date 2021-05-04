@@ -15,14 +15,9 @@
 <br> 
 <input type="button" value="Swap" 
     onclick="
-        if(firstname.innerHTML== a) {
-            firstname.innerHTML = b;
-            lastname.innerHTML =a ;
-        }
-        else {
-            firstname.innerHTML=a;
-            lastname.innerHTML=b;
-        }
+            temp = firstname.innerHTML;
+            firstname.innerHTML = lastname.innerHTML;
+            lastname.innerHTML = temp;
     ">  
 </body>
 </html>

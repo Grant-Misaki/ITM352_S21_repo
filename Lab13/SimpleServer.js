@@ -8,9 +8,8 @@ function request_callback (req, res) {
     res.write('<h1>The client date is: <script>document.write( Date.now() );</script></h1>'); // send another response
     res.end(); //end the response
 }
-
 http.createServer (
-    request_callback
+request_callback
 ).listen(8080); //the server object listens on port 8080
 
 console.log('Hello world HTTP server listening on localhost port 8080');
