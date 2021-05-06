@@ -1,6 +1,4 @@
 <script>
-var params = (new URL(document.location)).searchParams;
-
 function isNonNegInt(q, returnErrors=false) {
     if(q=='') q=0;
     var errors = []; // assume no errors at first
@@ -15,9 +13,9 @@ window.onload = function() {
     //check that we have quantity, if so print purchase, else gives error
         if(params.has('quantity_textbox') )    {
                 if(isNonNegInt(params.get('quantity_textbox') ) ) {
-                    document.body.innerHTML=`Thank you for ordering ${params.get('quantity_textbox')} item(s)`;
+                    document.body.innerHTML=`Thank you for ordering ${params.get('quantity_textbox')} items`;
             }    else {
-                window.location.href = "order_pageEx3.html" + document.location.search;
+                window.location.href = "order_page.html" + document.location.search;
         }
     }
 }
@@ -44,4 +42,6 @@ window.onload = function() {
                 if(isNonNegInt(params.get('quantity_textbox') ) ) {
                    quantity_textbox.value=params.get('quantity_textbox');                    
     }
+}
+
 </script>
