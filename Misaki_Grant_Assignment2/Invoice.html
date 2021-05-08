@@ -15,7 +15,7 @@
   <!DOCTYPE html>
   <html lang="en">
   <head>
-    <h1>Invoice</h1>
+    <h1>TacoBells</h1>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,12 +33,11 @@
         <script>
            // Initialize sub-total   
            subTotal = 0;
-           //uses a loop to get the extended price for all of the products ordered. (multiplies the price by the quantity from the quantity textbox)
            for (i in products) {
             extended_price = products[i].price*parseInt(params.get('quantity_textbox'+i));
             subTotal = subTotal + extended_price;
           
-          //displays incoice
+          
             document.write(`
               <tr>
                   <td width="43%">${products[i].name}</td>
@@ -52,7 +51,7 @@
     // Compute taxes
     var tax = (subTotal * 0.0575);
   
-  // Compute Shipping by subtotal amount.
+  // Compute Shipping
   var ship = 0;
   
   if (subTotal < 50) {
@@ -71,8 +70,6 @@
   var grandTotal = (subTotal + tax + ship);
         </script>
         
-
-        <script>//this section just generates the rest of the invoice.</script>
         <tr>
           <td colspan="4" width="100%">&nbsp;</td>
         </tr>
