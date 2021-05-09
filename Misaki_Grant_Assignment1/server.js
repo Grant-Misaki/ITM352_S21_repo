@@ -7,7 +7,7 @@ app.all('*', function (request, response, next) {
     next();
 });
 
-    app.get('./index.html', function(request, response, next)    {
+    app.get('public/index.html', function(request, response, next)    {
         response.send()
    
      });
