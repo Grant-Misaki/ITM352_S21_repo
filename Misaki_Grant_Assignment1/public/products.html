@@ -67,7 +67,7 @@
                     <img src=${products[i].image}>
                     <br><h2>${products[i].name}</h2>
                     <br><label> quantitiy </label>
-                    <br><input type="text" name="quantity_textbox${i}" onkeyup="checkQuantityTextbox(this)"> <br> 
+                    <br><input type="text" name="quantity_textbox${i}"  value=0 onkeyup="checkQuantityTextbox(this)"> <br> 
                     <span id='quantity_textbox${i}_message'> </span>
                     <br> <h2>$${products[i].price.toFixed(2)}</h2><br>
                 </td>

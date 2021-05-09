@@ -7,13 +7,13 @@ app.all('*', function (request, response, next) {
     next();
 });
 
-    app.get('public/index.html', function(request, response, next)    {
+    app.get('/index.html', function(request, response, next)    {
         response.send()
    
      });
 
     console.log(`listening on port 8080`)
-    app.use(express.static('.'));
+    app.use(express.static('./public'));
     app.listen(8080, function () {
 }
 );
