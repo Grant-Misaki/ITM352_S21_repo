@@ -72,6 +72,19 @@ app.all('*', function (req, res, next) {
     next();
 });
 
+app.get('/login', function (req, res, next) {
+    if (typeof req.cookies['username'] != 'undefined') {
+    logged_in = (`${req.cookies['username']} is already logged in`);
+    }
+    if (typeof req.session['last_login'] != 'undefined') {
+        console.log('Last login time was ' + req.session['last_login']);
+    } else {
+        console.log("first time login");
+    }
+    req.session['last_login']= Date();
+    console.log(logged_in);
+});
+
 //this processes the login form
 app.post('/process_login', function (req, res, next) {
     if (typeof req.session['last_login'] != 'undefined') {
@@ -88,7 +101,7 @@ app.post('/process_login', function (req, res, next) {
     //validates login info, 
     if (typeof user_data[username_entered] != 'undefined') {
         if (user_data[username_entered]['password'] == password_entered) {
-    
+            res.cookie('username', username_entered);
             res.send(`${username_entered} is logged in`);
         } else {
             res.send(`incorrect password`)
